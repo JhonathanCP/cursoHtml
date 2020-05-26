@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <section>
+        <h2>Primera forma</h2>
+        <!-- es importante poner el atributo name al input para que el backend lo reconozca -->
+        <form action=""><!-- Para crear un formulario action indica a donde va el formulario-->
+            <div>
+                <label for="nombre">Ingrese su nombre</label><!-- etiqueta del input // for conecta con el campo -->
+                <input name="username" id="nombre" type="text"><!-- input de tipo texto // si no lo colocas se pone por defecto en texto -->
+            </div><br>
+            <div>
+                <label for="contraseña">Ingrese su contraseña</label>
+                <input name="password" id="contraseña" type="password" required>
+            </div><br>           
+            <!-- <button>Enviar</button> --><!-- Idealmente se suele usar input submit -->
+            <input type="submit" value="Iniciar Sesion">
+        </form>
+    </section><hr>
+    <!-- OTRA FORMA MAS CORTA EVITANDO EL FOR -->
+    <section>
+        <h2>Segunda forma</h2>
+        <form action=""><!-- Para crear un formulario action indica a donde va el formulario-->
+            <div>
+                <label>Ingrese su nombre
+                    <input id="username" name="username" type="text">
+                </label>
+            </div><br>
+            <div>
+                <label>Ingrese su contraseña
+                    <input name="password" type="password">
+                </label>
+            </div><br>            
+            <!-- <button>Enviar</button> -->
+            <input type="submit" value="Iniciar Sesion">
+            <script>
+                document.getElementById("username")
+                .addEventListener('keyup', e => console.log(e.target.value))
+                print
+            </script>
+        </form>
+    </section><hr>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                           OTRO TIPOS DE INPUTS                           -->
+<!-- ----------------------------------------------------------------------- -->
+    <section>
+        <h2>ENVIAR CORREO ELECTRONICO</h2>
+        <form action="">
+            <div>
+                <label>Correo electronico
+                    <input type="email" name="" id="">
+                </label>
+            </div><br>
+            <div>
+                <input type="submit" value="Enviar Correo">
+            </div>
+        </form>
+    </section>
+    <section>
+        <h2>Ingresar fecha de nacimiento</h2>
+        <form action="">
+            <div>
+                <label>Fecha de nacimiento
+                    <input type="date" name="birthbay" id="birthday">
+                </label>
+            </div><br>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </section>
+    <section>
+        <h2>Ingresar Cantidad</h2>
+        <form action="">
+            <div>
+                <label>Cantidad de productos
+                    <input type="number">
+                </label>
+            </div><br>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </section>
+    <section>
+        <h2>Ingresar Edad</h2>
+        <form action="">
+            <div>
+                <label>Edad del cliente
+                    <input type="number" name="edad" min="0" max="120">
+                </label>
+            </div><br>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </section>
+    <section>
+        <h2>Ingresar pasatiempos(Opciones multiples)</h2>
+        <form action="">
+            <div>
+                <label>Correr
+                    <input type="checkbox" name="pasatiempo1">
+                </label>
+                <label>Leer
+                    <input type="checkbox" name="pasatiempo1">
+                </label>
+                <label>Estudiar
+                    <input type="checkbox" name="pasatiempo1">
+                </label>
+                <label>Bailar
+                    <input type="checkbox" name="pasatiempo1">
+                </label>
+            </div><br>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </section>
+    <!-- ATRIBUTO PLACEHOLDER -->
+    <section>
+        <h2>Prueba placeholder</h2>
+        <form action="">
+            <div>                
+                <input type="number" placeholder="Edad" name="edad" min="0" max="120">
+            </div><br>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </section>
+    
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 FIELDSET                                -->
+<!-- ----------------------------------------------------------------------- -->
+    <!-- Contenedor de campos -->
+    <h2>Fieldset</h2>
+    <fieldset>
+        <legend>Datos personales</legend>
+        <section>            
+            <form action="">
+                <div>
+                    <label>Correo electronico
+                        <input type="email" name="" id="">
+                    </label>
+                </div><br>
+                <div>
+                    <label>Fecha de nacimiento
+                        <input type="date" name="birthbay" id="birthday">
+                    </label>
+                </div><br>
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>               
+            </form>
+    </fieldset><hr>
+    <fieldset>
+        <legend>Tu genero(Una sola opcion "radio")</legend><!-- Es necesario el atributo name -->
+        <form>            
+            <label><input type="radio" name="gender" >Hombre</label>
+            <label><input type="radio" name="gender" >Mujer</label>
+            <label><input type="radio" name="gender" >Prefiero no decirlo</label>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </fieldset>
+    <fieldset><!-- Otra forma de una sola opcion -->
+        <legend>Tu pais(Una sola opcion)</legend><!-- Es necesario el atributo name -->
+        <form>            
+            <label for="country">Escoge tu pais</label>
+            <select name="country" id="country">
+                <optgroup label="America"><!-- Opcional cuando hay varias opciones -->
+                    <option value="pe">Perú</option>
+                    <option value="co">Colombia</option>
+                    <option value="br">Brasil</option>
+                </optgroup>
+                <optgroup label="Europa"><!-- Opcional cuando hay varias opciones -->
+                    <option value="es">España</option>
+                    <option value="it">Italia</option>
+                </optgroup>
+            </select>
+            <div>
+                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escribe tu duda"></textarea><!-- Para enviar un mensaje(Recomendación, queja, etc) -->
+            </div>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </fieldset>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                      ATRIBUTOS ESPECIALES DE INPUTS                     -->
+<!-- ----------------------------------------------------------------------- -->
+<!-- readonly solo lectura//importante agregarle un value -->
+<!-- required campo obligatorio -->
+</body>
+</html>

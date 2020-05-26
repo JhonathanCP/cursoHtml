@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta es mi primera pagina web">
+    <title>Mi primera pagina web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    
+</head>
+<body>
+<!-- ----------------------------------------------------------------------- -->
+<!--                   INTERACTIVIDAD Y CONTENIDO EMBEBIDO                   -->
+<!-- ----------------------------------------------------------------------- -->
+    <dialog id="modal"><!-- Modal -->
+        <h2>Curso HTML desde 0</h2>
+        <p>Precio: S/140.00</p>
+        <button id="close">Cerrar</button>
+    </dialog>
+    <button id="button">Abrir modal</button>
+    <h2>Contenido interactivo</h2>
+    <details><!-- seccion expandible -->
+        <summary>HTML</summary><!-- descripcion de la seccion -->
+        <p>Lenguaje de marcado de hipertexto</p>
+    </details>
+    <hr>
+    <!-- Contenido embebido -->
+    <!-- Agregar video de youtube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5NPBIwQyPWE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Otras plataformas -->
+    <!-- Disqus comentarios -->
+    <!-- Wufoo formularios -->
+<!-- ----------------------------------------------------------------------- -->
+<!--                                CABECERA                                 -->
+<!-- ----------------------------------------------------------------------- -->
+
+    <header><img style="width:250px ; height:250px ;" src="img/logo.png" id="logo" alt=""></header>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                           BARRA DE NAVEGACION                           -->
+<!-- ----------------------------------------------------------------------- -->
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                ARTICULOS                                -->
+<!-- ----------------------------------------------------------------------- -->
+
+    <article>
+        <h1>Bienvenidos a mi sitio web</h1>
+        <p>Estoy muy contento de mostrarles mi primera pagina web</p>
+        <h2>Mi primera experiencia</h2>
+        <!-- SECCIONES -->
+        <section>
+            <h3>Dia 1</h3>
+            <p>dasdasdasdas</p>
+        </section>
+        <section>
+            <h3>Dia2</h3>
+            <p>dsadadadadda</p>
+        </section>
+    </article>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 LISTAS                                  -->
+<!-- ----------------------------------------------------------------------- -->
+
+    <!-- LISTAS ORDENADAS, ul es cuando no quieres que sea ordenado -->
+    <p>Mis lugares favoritos son:</p><!-- parrafo -->
+    <ol>
+        <li>Arequipa</li>
+            <ol>
+                <li>Characato</li>
+                <li>Cayma</li>
+            </ol>
+        <li>Lima</li>
+        <li>Trujillo</li>
+        <li>Piura</li>
+            <ol>
+                <li>Mancora</li>
+                <li>Organos</li>
+            </ol>
+        <li>Cusco</li>
+            <ol>
+                <li>Machu Picchu</li>
+            </ol>
+        <li>Pucallpa</li>
+    </ol>
+    <!-- LISTAS DE DEFINICION -->
+    <p>Capitales de cada país</p>
+    <dl>
+        <dt>Peru</dt>
+        <dd>Lima</dd>
+        <dt>Colombia</dt>
+        <dd>Bogota</dd>
+        <dt>Ecuador</dt>
+        <dd>Quito</dd>
+    </dl>
+    <!-- DIV ES UN CONTENEDOR DE BLOQUE SIN ESPECIFICACION -->
+    <!-- CONTENIDO DISRUPTIVO -->
+    <figure>
+        <pre><!--Imprime tal como está su formato-->
+            <code><!-- Inserta un contenido de codigo -->
+                function hola(){
+                    return "hola";
+                }
+            </code>
+        </pre>
+        <figcaption>Ejemplo de codigo JAVASCRIPT<!-- Opcional//descripcion del figure --></figcaption>
+    </figure>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--        ELEMENTOS DE LINEA(siempre dentro de elementos de bloque)        -->
+<!-- ----------------------------------------------------------------------- -->
+    <p>
+        <small></small><!-- texto de menor importancia -->
+        <span></span><!-- contenedor de texto sin especificacion -->
+        <strong></strong><!-- importante -->
+        <em></em><!-- enfasis//muestra en italika -->
+        <cite></cite><!-- citar -->
+        <dfn></dfn><!-- definicion -->
+        <code></code><!-- codigo -->
+        <datagrid></datagrid><!-- datos de un programa -->
+        <br><!-- salto de linea -->
+        <q></q><!-- cita -->
+        <abbr></abbr><!-- abreviacion -->
+        <del></del><!-- delete, texto expirado -->
+        <wbr><!-- wordbreak -->
+        <sup></sup><!-- superindice//letra pequeña arriba-->
+        <sub></sub><!-- subindice//letra pequeña abajo-->
+        <time></time><!-- indica tiempo --> 
+        <mark></mark><!-- resaltar -->
+        <a href=""></a><!-- enlace -->
+    </p>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                             TIPOS DE ENLACE                             -->
+<!-- ----------------------------------------------------------------------- -->
+    <p>
+        <!-- ruta absoluta -->
+        <a href="https://ed.team">EDUCACION VIRTUAL</a><br>
+        <!-- ruta relativa, mismo directorio o carpeta//ambas formas son lo mismo -->
+        <a href="contacto.html">CONTACTO</a><br>
+        <a href="./usuarios.html">USUARIOS</a><br>
+        <!-- ruta relativa, carpeta superior -->
+        <a href="../usuarios.html">USUARIOS</a><br>
+        <!-- ruta relativa subcarpeta -->
+        <a href="../usuarios/usuarios.html">USUARIOS</a><br>
+        <!-- ruta relativa dos carpeta arriba y subcarpeta -->
+        <a href="../../usuarios/usuarios.html">USUARIOS</a><br>
+        <!-- ruta relativa a la raiz//carpeta madre del proyecto -->
+        <a href="/usuarios.html">USUARIOS</a>
+    </p>
+<!-- ----------------------------------------------------------------------- -->
+<!--                                EJEMPLOS                                 -->
+<!-- ----------------------------------------------------------------------- -->
+    <p>PARRAFO</p>
+    <p> PARRAFO <span>span</span> <span>span</span> <strong>strong</strong> <em>em</em></p>
+    <p>
+        <a href="./marcadores.html#capitulo2" target="_blank"><!-- Target sirve para abrirlo en una nueva pestaña -->Ir al capitulo 2 de marcadores</a>
+    </p>
+    <!-- INSERTAR IMAGEN -->
+    <img src="./img/logo.png" alt="ESTE ES UN LOGO DE LA PAGINA" style="width:150px ; height:150px ;"><br><!-- en src usar el mismo concepto de href y el alt va una descripcion alternativa -->
+    <img src="https://images.pexels.com/photos/3584758/pexels-photo-3584758.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" style="width:220px ; height:350px ;"><br>
+    <!-- Se puede sacar imagenes sin copyright de pexels.com -->
+    <!-- Atributo srcset para alternar imagen segun pixeldevice//No se visualiza bien en Chrome-->
+    <img src="./img/sneackers.jpg" alt="foto de zapatillas" srcset="./img/bird.jpg 1.5x, ./img/forest.jpg 2x"><br>
+    <!-- Otra opcion de hacerlo es con la etiqueta picture, es mejor para hacerlo con mas imagenes -->
+    <!-- Es importante hacerlo desde el mayor ancho hasta el menor// o del Mayor Device pixel ratio -->
+    <picture>
+        <source media="(min-width:800px )" srcset="./img/forest.jpg">
+        <source media="(min-width:600px )" srcset="./img/bird.jpg">
+        <img src="./img/sneackers.jpg" alt="Este es el default">
+    </picture>
+    
+<!-- ----------------------------------------------------------------------- -->
+<!--                     MICRODATOS CON SCHEMAS                              -->
+<!-- ----------------------------------------------------------------------- -->
+    <!-- ESTO SIRVE PARA ESPECIFICAR UN TIPO DE ARTICULO A INTRODUCIR Y SEA INTERPRETADO POR GOOGLE -->
+    <article itemscope itemtype="http://schema.org/Blog">
+        <h2>CURSO HTML 5.2 UNMSM</h2>
+        <p>SE DICTARAN LOS DIAS LUNES Y MIERCOLES</p>        
+        <footer>
+            <p itemprop="name">Curso HTML</p>
+            <p itemprop="author">Adrian Padilla</p>
+        </footer>
+    </article>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                OPENGRAPH                                -->
+<!-- ----------------------------------------------------------------------- -->
+    <!-- SIMILAR A MICRODATOS DE GOOGLE PERO DE FACEBBOK -->
+    <!-- REVISAR DOCUMENTACION EN https://ogp.me/ -->
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 TABLAS                                  -->
+<!-- ----------------------------------------------------------------------- -->
+    <table>
+        <caption>Horario de clases</caption><!-- Descripcion de tablas//opcional -->
+        <!-- COLGROUP -->// sirve para agrupar grupos de columnas
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col style="background: yellow;">
+        </colgroup>
+        <!-- Otra forma
+        <colgroup>
+            <col span="4">
+            <col style="background: yellow;">
+        </colgroup> -->
+        <thead><!-- Es necesario encerrar la cabecera en el thead -->
+            <tr><!-- TABLE ROW(FILA) -->
+                <th>Lunes</th><!-- TABLE HEAD//Cabecera de tabla -->
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody><!-- El cuerpo de la tabla -->
+            <tr>
+                <td rowspan="2">HTML</td><!-- TABLE DATA -->
+                <td>PHP</td>
+                <td rowspan="2">JAVASCRIPT</td>
+                <td>Python</td>
+                <td>CSS</td>    
+            </tr>
+            <!-- EJEMPLO DE TABLAS AGRUPADAS Por filas rowspan -->            
+            <tr>                
+                <td>Go</td>                
+                <td>BigData</td>
+                <td>Diseño UX</td>    
+            </tr>
+            <!-- EJEMPLO DE TABLAS AGRUPADAS Por columnas -->
+            <tr>
+                <td colspan="5">BREAK</td> <!-- colspan indica la cantidad de columnas que ocupa -->  
+            </tr>
+            <tr>
+                <td>Java</td><!-- TABLE DATA -->
+                <td>C#</td>
+                <td>Vue</td>
+                <td>C++</td>
+                <td>TypeScript</td>    
+            </tr>
+        </tbody>
+        <tfoot><!-- Conclusion de informacion complementaria//NO OBLIGATORIO -->
+            <tr>
+                <td>4 creditos</td>
+                <td>3 creditos</td>
+                <td>5 creditos</td>
+                <td>3 creditos</td>
+                <td>2 creditos</td>    
+            </tr>
+        </tfoot>
+    </table>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                  VIDEO                                  -->
+<!-- ----------------------------------------------------------------------- -->
+    <!-- Se recomienda codec h264 -->
+    <!-- video.js y flowplayer motores de reproduccion -->
+    <video src="./media/video.mp4" controls poster=""></video><!-- controls activa la barra de reproduccion -->
+    <!-- atributo poster es para polocarle un primer frame -->
+    <audio src=""></audio><!-- Audio es lo mismo -->
+
+    
+<!-- ----------------------------------------------------------------------- -->
+<!--                              PIE DE PAGINA                              -->
+<!-- ----------------------------------------------------------------------- -->
+
+    <footer>
+        <p>Jhonathan Centti</p>
+    </footer>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                        CONTENIDO NO RELACIONADO                         -->
+<!-- ----------------------------------------------------------------------- -->
+    <aside></aside>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                        DOCUMENTOS DE JAVASCRIPT                         -->
+<!-- ----------------------------------------------------------------------- -->
+
+    <script src="scripts.js"></script>
+    <script>
+        const modal = document.getElementById('modal');
+        const button = document.getElementById('button');
+        const close = document.getElementById('close');
+        button.addEventListener('click', () => {
+            modal.setAttribute('open','true')
+        })
+        close.addEventListener('click', () => {
+            modal.removeAttribute('open')
+        })
+    </script>
+</body>
+</html>
